@@ -13,7 +13,7 @@ net = {
 	
 	notifyError = "notifyError",
 	notifyFail = "notifyFailed",
-	notifySuccess = "notifySuccess",
+	
 	invalidRequest = "requestError",
 	requestFail = "requestFailed",
 	
@@ -133,7 +133,7 @@ function net.addDefaultListeners()
 	net.notifyMap[net.requestFail] = net.onRequestFail
 end
 
----[[ example:
+--[[ example:
 function net.testHttpRequest()
 	local function httpRequestCallback(isSuccess, value)
 		print("---", isSuccess, value)
