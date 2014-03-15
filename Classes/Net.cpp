@@ -33,29 +33,37 @@ Net::~Net()
 	msgQueue.clear();
 }
 
-void Net::connect(const char *ip, int port)
+void Net::nonSyncConnect()
 {
-	pc_client_t *pre_client = client;
-	client = pc_client_new();
-
 	struct sockaddr_in address;
 	memset(&address, 0, sizeof(struct sockaddr_in));
 	address.sin_family = AF_INET;
 	address.sin_port = htons(port);
-	address.sin_addr.s_addr = inet_addr(ip);
+	address.sin_addr.s_addr = inet_addr(ip.c_str());
 
-	if(pc_client_connect(client, &address)) {
-		pushMsg(PC_EVENT_CONNECTEFAIL, "");
-		pc_client_destroy(client);
-		return;
+	if(pc_client_connect(client, &address))
+	{
+		//pushMsg(PC_EVENT_CONNECTEFAIL, "");
 	}
-
-	pushMsg(PC_EVENT_CONNECTED, "");
-
+	else
+	{
+		pushMsg(PC_EVENT_CONNECTED, "");
+	}	
+}
+void Net::connect(const char *ip_, int port_)
+{
+	pc_client_t *pre_client = client;
+	client = pc_client_new();
 	if(pre_client)
 	{
 		pc_client_destroy(pre_client);
 	}
+
+	ip = ip_;
+	port = port_;
+	
+	auto t = std::thread(&Net::nonSyncConnect, this);
+    t.detach();
 }
 
 void Net::addListener(const char* event)

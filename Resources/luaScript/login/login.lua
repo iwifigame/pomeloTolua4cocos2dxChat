@@ -11,8 +11,7 @@ function login.login()
 	scene:addChild(layer)
 	cc.Director:getInstance():runWithScene(scene)
 	
-	net.connect("192.168.12.133", 3014)
-	net.addListener(net.connected, login.onConnectGateServer)
+	net.connect("192.168.12.133", 3014, login.onConnectGateServer)
 end
 
 function login.onConnectGateServer()
@@ -24,12 +23,11 @@ end
 function login.onRequestGateBack(msg)
 	cclog("--- host: " .. msg["host"])
 	cclog("--- port: " .. msg["port"])
-	net.connect(msg["host"], msg["port"])
-	net.removeListener(net.connected)
-	net.addListener(net.connected, login.onConnectGameServer)
+	net.connect(msg["host"], msg["port"], login.onConnectGameServer)
 end
 
 function login.onConnectGameServer()
+	net.addDefaultListeners()
 	local route = "connector.entryHandler.enter"
 	local msg = { username = "luaClient", rid = "111" }
 	

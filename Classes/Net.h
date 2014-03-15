@@ -31,6 +31,8 @@ public:
 
 	static inline Net* getInstance();
 
+	void nonSyncConnect();
+
 	void connect(const char *ip, int port);
 
 	void addListener(const char* event);
@@ -59,6 +61,8 @@ protected:
 	static void pomeloMsgCallBack(pc_client_t *client, const char *event, void *data);
 
 private:
+	std::string ip;
+	int port;
 	pc_client_t *client;
 	static int onMsgLuaCallback;
 	ThreadSafeQueue< std::map<std::string, std::string> > msgQueue;
