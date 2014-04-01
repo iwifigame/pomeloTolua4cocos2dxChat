@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{d505055e-ae66-492a-9c87-60341f8214d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\robot">
+      <UniqueIdentifier>{3858af5b-91ff-40f9-8886-b2068bcc4e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{823b71a6-4c4f-4645-b8b6-4b0733f4bb95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pomelo.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\robot\robot_chat.c">
+      <Filter>test\robot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\network.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pkg-handshake.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="example">
+      <UniqueIdentifier>{96fbbe1b-841b-49f7-b3fe-96dc2d58f2ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pomelo.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="example\destroy.c">
+      <Filter>example</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

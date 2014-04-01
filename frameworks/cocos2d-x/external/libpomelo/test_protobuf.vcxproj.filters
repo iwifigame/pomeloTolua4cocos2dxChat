@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{e5fa074c-17c1-413f-b998-00a354aef877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\protobuf">
+      <UniqueIdentifier>{2d896f6d-1f62-43da-ac78-9fb2d44697f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bf9723e8-64fc-4e5b-99f8-df99d05c7900}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pomelo.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\protobuf\test_protobuf.c">
+      <Filter>test\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pb-decode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pb-encode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
