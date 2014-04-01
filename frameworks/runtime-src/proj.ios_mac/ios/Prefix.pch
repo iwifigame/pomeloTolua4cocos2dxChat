@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'pomeloTolua4cocos2dxChat' target in the 'pomeloTolua4cocos2dxChat' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
