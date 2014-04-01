@@ -2,7 +2,7 @@ pomeloTolua4cocos2dxChat
 ========================
 
 Dependencies:
-    1.libpomelo
+	1.libpomelo
 	2.cocos2dx3.0rc0
 
 How to start
