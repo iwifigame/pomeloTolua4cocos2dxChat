@@ -1,9 +1,17 @@
-coco_pomelo_base
-================
+pomeloTolua4cocos2dxChat
+========================
 
-我这网速不太给力，想把整个项目目录传上去失败多次，打包传也失败多次。。。
-把使用cocos3.0rc0的整个项目打包放到云盘上了：
-http://yunpan.cn/QI2pyfj8xicGZ
-win32、ios、android应该都是可以的，cocos3.0rc的一些文档请参考官方
+Dependencies:
+    1.libpomelo
+	2.cocos2dx3.0rc0
 
-当前这个项目原来的文件没有删除，也没有更新，请以上面云盘下载包为准
+How to start
+	1.create a new project pomeloTolua4cocos2dxChat using cocos2dx3.0rc0, for example:
+		$ cocos new pomeloTolua4cocos2dxChat -p com.libpomeloTolua4cocos2dx.chat -l lua -d /yourDir;
+	2.cover the project by this;
+	3.copy libpomelo to frameworks/cocos2d-x/external, then frameworks/cocos2d-x/external/libpomelo，
+	  and you should refer to libpomelo's README document to generate projects for different platforms;
+	4.build it, you could refer to cocos2dx3.0rc0's README document;
+
+	
+You can also download the whole project from：http://yunpan.cn/QIe46sT5xkPDR and just build it.
