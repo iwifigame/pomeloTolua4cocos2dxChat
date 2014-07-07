@@ -14,4 +14,4 @@ How to start
 	4.build it, you could refer to cocos2dx3.0rc0's README document;
 
 	
-You can also download the whole project from：http://yunpan.cn/QIe46sT5xkPDR  访问密码 a0bb
+You can also download the whole project from：http://yun.baidu.com/  id: 121078646@qq.com passwd: 4github
