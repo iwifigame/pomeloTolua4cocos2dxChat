@@ -164,6 +164,8 @@ void Net::httpResponse(HttpClient *sender, HttpResponse *response)
   	lua_pushstring(L, value.c_str());
   	LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(requestMap[tag], 2);
 	requestMap[tag] = 0;
+	
+	sender->destroyInstance();
 }
 
 void Net::registerOnMsgLuaCallBack(int luaCallback)
